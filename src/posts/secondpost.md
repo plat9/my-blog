@@ -2,7 +2,7 @@
 title: "First Post"
 description: "This is my first post!"
 date: "2024-09-24"
-image: /sword.webp
+image: /3.webp
 categories:
   - blog
   - project
