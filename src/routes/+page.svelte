@@ -1,5 +1,9 @@
 <script lang="ts">
     import { title, description, url } from "$lib/config";
+    import { signIn, signOut } from "@auth/sveltekit/client";
+    import type { PageData } from './$types';
+
+    let { data }: { data: PageData } = $props();
 </script>
 
 <!-- SEO -->
@@ -27,11 +31,31 @@
 </svelte:head>
 
 <main class="flex flex-col items-center justify-center min-h-[60vh] gap-6 px-4">
-    <h1 class="text-gray-900 dark:text-white text-4xl font-bold">Hi guys so my blog</h1>
+    <h1 class="text-gray-900 dark:text-white text-4xl font-bold">Hi guys this is my blog</h1>
     <p class="text-gray-700 dark:text-gray-300 text-lg max-w-2xl text-center">A blog to share my learning bath whatever that is.</p>
     
     <a href="/blog" class="flex justify-center items-center bg-gray-100 dark:bg-gray-800 block max-w-sm p-6 border border-gray-300 dark:border-gray-600 rounded-lg shadow-md hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
         <span class="text-gray-900 dark:text-white font-semibold">View the blog</span>
     </a>
+    <!-- src/routes/+page.svelte -->
+    <script lang="ts">
+        import { signIn, signOut } from "@auth/sveltekit/client";
+        import type { PageData } from './$types';
+    
+        let { data }: { data: PageData } = $props();
+    </script>
+    
+    <h1>Home Page</h1>
+    
+    {#if data.session}
+        <button onclick={() => signOut()}>Sign Out</button>
+        <pre>{JSON.stringify(data.session, null, 2)}</pre>
+    {:else}
+        <button onclick={() => signIn("google")}>Sign In with Google</button>
+    {/if}
 </main>
     
+
+
+    
+
