@@ -9,6 +9,5 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
       clientSecret: GOOGLE_CLIENT_SECRET,
     }),
   ]
-  trustHost: true,
-  process.env.AUTH_SECRET
+  
 });
