@@ -2,12 +2,10 @@
 title: "First Post"
 description: "This is my first post!"
 date: "2024-09-24"
-image: /kaniki.webp
+image: /sword.webp
 categories:
-  - tutorial
-  - learning
-  - cool
-  - project refrence
+  - blog
+  - project
 published: true
 ---
 
@@ -18,5 +16,3 @@ published: true
 This is my first post!
 
 ## Let's get started
-
-Lorem ipsum dolor sit amet...

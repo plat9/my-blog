@@ -37,19 +37,16 @@ import { formatDate } from "$lib/utils.js";
             </header>
     
             <div class="p-4 space-y-4">
-                <h3 class="h3" data-toc-ignore>{post.title}</h3>
+                <h3 class="text-2xl font-bold mb-2" data-toc-ignore style="font-family: 'Bohgaku', sans-serif;">{post.title}</h3>
                 <article>
-                    <p>
+                    <p class="text-base" style="font-family: 'Cascadia Code', monospace;">
                         {post.description}
                     </p>
                 </article>
             </div>
             <hr class="opacity-50" />
-            <footer class="p-4 flex justify-start items-center space-x-4">
-                <div class="flex-auto flex justify-between items-center">
-                    <h6 class="font-bold" data-toc-ignore>By Jimmy McBride</h6>
-                    <small>On {formatDate(post.date)}</small>
-                </div>
+            <footer class="p-4 flex justify-end items-center">
+                <small>On {formatDate(post.date)}</small>
             </footer>
         </a>
     {/key}

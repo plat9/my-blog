@@ -1,2 +1,18 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
+
+@font-face {
+	font-family: 'Bohgaku';
+	src: local('Bohgaku Regular Regular');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Cascadia Code';
+	src: local('Cascadia Code Regular');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
