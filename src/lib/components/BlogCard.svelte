@@ -39,7 +39,7 @@ import { formatDate } from "$lib/utils.js";
             <div class="p-4 space-y-4">
                 <h3 class="text-2xl font-bold mb-2" data-toc-ignore style="font-family: 'Bohgaku', sans-serif;">{post.title}</h3>
                 <article>
-                    <p class="text-base" style="font-family: 'Cascadia Code', monospace;">
+                    <p class="text-base" style="font-family: 'Inter', monospace;">
                         {post.description}
                     </p>
                 </article>
